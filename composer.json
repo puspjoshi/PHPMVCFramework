@@ -1,0 +1,20 @@
+{
+    "name": "pusp/phpmvc-framework",
+    "autoload": {
+        "psr-4": {
+            "Pusp\\PhpmvcFramework\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "pusp joshi",
+            "email": "erpushparaj23@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {}
+}
