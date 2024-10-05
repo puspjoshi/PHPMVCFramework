@@ -28,10 +28,32 @@ namespace app\core;
         return substr($path, 0, $position);
     }
 
-    public function getMethod()
+    public function method()
     {
       return strtolower($_SERVER['REQUEST_METHOD']);
     }
-    
 
+    public function isGet(){
+      return $this->method() === 'get';
+    }
+    public function isPost(){
+      return $this->method() === 'post';
+    }
+    
+    public function getBody(){
+      $body = [];
+      if($this->method() === "get"){
+        foreach($_GET as $key => $value){
+          $body[$key] = filter_input(INPUT_GET, $value, FILTER_SANITIZE_SPECIAL_CHARS);
+        }
+      }
+
+      if($this->method() === "post"){
+        foreach($_POST as $key => $value){
+          $body[$key] = filter_input(INPUT_POST, $value, FILTER_SANITIZE_SPECIAL_CHARS);
+        }
+      }
+
+      return $body;
+    }
   }
