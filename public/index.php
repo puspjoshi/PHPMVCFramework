@@ -12,6 +12,7 @@ error_reporting(E_ALL);
 require_once __DIR__.'/../vendor/autoload.php';
 
 use app\controllers\SiteController;
+use app\controllers\AuthController;
 use app\core\Application;
 
 $app = new Application(dirname(__DIR__));
