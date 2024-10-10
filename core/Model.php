@@ -65,7 +65,7 @@ namespace app\core;
                     $this->addError($attribute, self::RULE_MAX, $rule);
                 }
                 
-                if($ruleName === self::RULE_MATCH && $value !== $rule['match']){
+                if($ruleName === self::RULE_MATCH && $value !== $this->{$rule['match']}){
                     $this->addError($attribute, self::RULE_MATCH, $rule);
                 }
             }
@@ -81,6 +81,16 @@ namespace app\core;
             $message = str_replace("{{$key}}", $value, $message);
         }
         $this->errors[$attribute][] = $message;
+    }
+
+    public function hasError($attribute)
+    {
+        return $this->errors[$attribute] ?? false;
+    }
+
+    public function getFirstError($attribute)
+    {
+        return $this->errors[$attribute][0] ?? false;
     }
 
     public function errorMessages()

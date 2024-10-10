@@ -35,14 +35,10 @@ use app\models\RegisterModel;
           $registerModel->loadData($request->getBody());
           
           
-          
-
           if($registerModel->validate() && $registerModel->register())
           {
             return 'success';
           }
-
-          echo "<pre>"; var_dump($registerModel->errors); echo "</pre>"; exit;
 
           return $this->render('register', [
             'model' => $registerModel
