@@ -46,7 +46,8 @@ use app\core\Model;
         </div>
         
       ',
-      ucfirst($this->attribute),
+
+      $this->model->getLables($this->attribute),
       $this->type,
       $this->attribute,
       $this->model->{$this->attribute},

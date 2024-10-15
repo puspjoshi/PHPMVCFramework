@@ -21,6 +21,7 @@ namespace app\core;
     public Request $request;
     public Response $response;
     public static Application $app;
+    public Session $session;
     public Database $db;
     public Controller $controller;
 
@@ -31,7 +32,9 @@ namespace app\core;
 
       $this->request = new Request();
       $this->response = new Response();
+      $this->session = new Session();
       $this->router = new Router($this->request, $this->response);
+
 
       $this->db = new Database($config['db']);
     }

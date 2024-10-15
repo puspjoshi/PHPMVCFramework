@@ -16,7 +16,7 @@
             email varchar(255) NOT NULL,
             firstname varchar(255) NOT NULL,
             lastname varchar(255) NOT NULL,
-            status TINYINT NOT NULL,
+            status TINYINT DEFAULT NULL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         ) ENGINE=INNODB;
         ";

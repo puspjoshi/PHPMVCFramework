@@ -21,6 +21,7 @@ namespace app\core;
     public const RULE_MIN = 'min';
     public const RULE_MAX = 'max';
     public const RULE_MATCH = 'match';
+    public const RULE_UNIQUE = 'unique';
 
 
     public function loadData( $data )
@@ -66,12 +67,38 @@ namespace app\core;
                 }
                 
                 if($ruleName === self::RULE_MATCH && $value !== $this->{$rule['match']}){
+                    $rule['match'] = $this->getLables($rule['match']);
                     $this->addError($attribute, self::RULE_MATCH, $rule);
+                }
+
+                if($ruleName === self::RULE_UNIQUE){
+                    $className = $rule['class'];
+                    $Uniqueattr = $rule['attrubute'] ?? $attribute;
+                    $tableName = $className::tableName();
+                    $statement = Application::$app->db->prepare("SELECT * FROM $tableName WHERE $Uniqueattr = :attr");
+
+                    $statement->bindValue(":attr", $value);
+                    $statement->execute();
+                    $record = $statement->fetchObject();
+
+                    if($record){
+                        $this->addError($attribute,self::RULE_UNIQUE,['field'=>$this->getLables($attribute)]);
+                    }
                 }
             }
         }
 
         return empty($this->errors);
+    }
+
+    public function lables(): array
+    {
+      return [];
+    }
+
+    public function getLables($attribute)
+    {
+        return $this->lables()[$attribute] ?? $attribute;
     }
 
     public function addError( string $attribute, string $rule, $params=[])
@@ -101,6 +128,7 @@ namespace app\core;
             self::RULE_MIN => 'Min length of this field must be {min}',
             self::RULE_MAX => 'Max length of this field must be {max}',
             self::RULE_MATCH => 'This field must be same as {match}',
+            self::RULE_UNIQUE => 'Record with this {field} is already exist',
         ];
     }
 
