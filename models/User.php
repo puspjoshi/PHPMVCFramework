@@ -1,7 +1,8 @@
 <?php
 namespace app\models;
 
-use app\core\DbModel;
+use app\core\UserModel;
+
 /**
  * User: Pusp raj joshi
  * Date: Aug 2024
@@ -16,7 +17,7 @@ use app\core\DbModel;
   *
   */
 
-  class User extends DbModel
+  class User extends UserModel
   {
     public const STATUS_INACTIVE = 0;
     public const STATUS_ACTIVE = 0;
@@ -36,7 +37,7 @@ use app\core\DbModel;
         return parent::save();
     }
 
-    public function tableName(): string
+    public static function tableName(): string
     {
         return 'users';
     }
@@ -44,6 +45,11 @@ use app\core\DbModel;
     public function attributes(): array
     {
         return ['firstname','lastname','email','password', 'status'];
+    }
+
+    public static function primaryKey(): string
+    {
+        return 'id';
     }
 
     public function rules(): array
@@ -68,5 +74,10 @@ use app\core\DbModel;
             'password' => 'Password',
             'confirmPassword' => 'Confirm password'
         ];
+    }
+
+    public function getDisplayName(): string
+    {
+        return $this->firstname.' '.$this->lastname;
     }
   }

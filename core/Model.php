@@ -110,6 +110,13 @@ namespace app\core;
         $this->errors[$attribute][] = $message;
     }
 
+    public function addErrorMsg(string $attribute, string $message)
+    {
+        $this->errors[$attribute][] = $message;
+
+        return false;
+    }
+
     public function hasError($attribute)
     {
         return $this->errors[$attribute] ?? false;
