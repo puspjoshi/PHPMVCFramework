@@ -29,6 +29,8 @@ use app\core\UserModel;
     public int $status = self::STATUS_INACTIVE;
     public string $password = '';
     public string $confirmPassword = '';
+    public string $created_at='';
+    public string $id = '';
 
     public function save()
     {

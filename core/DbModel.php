@@ -24,7 +24,7 @@ namespace app\core;
 
     public function save()
     {
-        $tableName = self::tableName();
+        $tableName = static::tableName();
         $attributes = $this->attributes();
 
         $params = array_map(fn($attr) => ":$attr",$attributes);
