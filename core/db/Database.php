@@ -1,6 +1,7 @@
 <?php
-namespace app\core;
+namespace app\core\db;
 
+use app\core\Application;
 use PDO;
 
 /**
@@ -13,7 +14,7 @@ use PDO;
   * Class Database
   * 
   * @author Pusp Joshi <erpushparaj23@gmail.com>
-  * @package app\core
+  * @package app\core\db
   *
   */
 

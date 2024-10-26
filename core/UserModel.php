@@ -1,5 +1,8 @@
 <?php
 namespace app\core;
+
+use app\core\db\DbModel;
+
 /**
  * User: Pusp raj joshi
  * Date: Aug 2024

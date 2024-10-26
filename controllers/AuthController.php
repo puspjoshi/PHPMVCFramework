@@ -27,7 +27,7 @@ use app\core\middlewares\AuthMiddleware;
   {
     public function __construct()
     {
-      $this->registerMiddleware(new AuthMiddleware());
+      $this->registerMiddleware(new AuthMiddleware(['profile']));
     }
     public function login(Request $request, Response $response){
 

@@ -35,7 +35,7 @@ use app\core\exception\ForbiddenException;
     {
         if(Application::isGuest())
         {
-            if(empty($this->action) || in_array(Application::$app->controller->action, $this->actions))
+            if(empty($this->actions) || in_array(Application::$app->controller->action, $this->actions))
             {
                 throw new ForbiddenException();
             }

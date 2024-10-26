@@ -1,3 +1,8 @@
+<?php
+/** @var $this \app\core\View */
+
+$this->title = "Register";
+?>
 <h1>Register page</h1>
 <?php
 
