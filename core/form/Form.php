@@ -32,7 +32,12 @@ use app\core\Model;
 
     public function field(Model $model, $attributes)
     {
-        return new Field($model, $attributes);
+        return new InputField($model, $attributes);
+    }
+
+    public function textareaField(Model $model, $attributes)
+    {
+        return new TextareaField($model, $attributes);
     }
 
   }
