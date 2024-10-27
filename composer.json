@@ -1,10 +1,5 @@
 {
     "name": "pusp/phpmvc-framework",
-    "autoload": {
-        "psr-4": {
-            "Pusp\\PhpmvcFramework\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "pusp joshi",
@@ -18,6 +13,6 @@
     },
     "require": {
         "vlucas/phpdotenv": "^5.6",
-        "eork/php-mvc-core": "^1.0"
+        "eork/php-mvc-core": "^v1.0.3"
     }
 }
