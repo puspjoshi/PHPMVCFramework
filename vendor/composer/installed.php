@@ -3,13 +3,22 @@
         'name' => 'pusp/phpmvc-framework',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c0777d56e51a7813fef42573f6036adb6c64a14b',
+        'reference' => '3e7d51394e6757d905c95d05d57b2c32b1670e94',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'eork/php-mvc-core' => array(
+            'pretty_version' => 'v1.0.3',
+            'version' => '1.0.3.0',
+            'reference' => '741660d10f49809efd8b5043b657ff6ffe7889bd',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../eork/php-mvc-core',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'graham-campbell/result-type' => array(
             'pretty_version' => 'v1.1.3',
             'version' => '1.1.3.0',
@@ -31,7 +40,7 @@
         'pusp/phpmvc-framework' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c0777d56e51a7813fef42573f6036adb6c64a14b',
+            'reference' => '3e7d51394e6757d905c95d05d57b2c32b1670e94',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

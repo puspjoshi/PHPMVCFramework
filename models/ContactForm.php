@@ -1,7 +1,7 @@
 <?php
 namespace app\models;
 
-use app\core\Model;
+use eork\phpmvc\Model;
 
 /**
  * User: Pusp raj joshi

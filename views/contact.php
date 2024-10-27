@@ -1,10 +1,10 @@
 <?php
 /** 
- * @var $this \app\core\View 
+ * @var $this \eork\phpmvc\View 
  * @var $model \app\models\ContactForm
 */
 
-use app\core\form\Form;
+use eork\phpmvc\form\Form;
 
 $this->title = "Contact";
 ?>

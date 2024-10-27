@@ -13,6 +13,10 @@ class ComposerStaticInit5530eef11cd91a61f272d40bf05b186f
     );
 
     public static $prefixLengthsPsr4 = array (
+        'e' => 
+        array (
+            'eork\\phpmvc\\' => 12,
+        ),
         'a' => 
         array (
             'app\\' => 4,
@@ -38,6 +42,10 @@ class ComposerStaticInit5530eef11cd91a61f272d40bf05b186f
     );
 
     public static $prefixDirsPsr4 = array (
+        'eork\\phpmvc\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/eork/php-mvc-core',
+        ),
         'app\\' => 
         array (
             0 => __DIR__ . '/../..' . '/',

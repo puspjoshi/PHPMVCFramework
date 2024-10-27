@@ -4,8 +4,41 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a5e62d181889e8c9d633e755fe98868",
+    "content-hash": "9e855a979162e332571cd8355372647f",
     "packages": [
+        {
+            "name": "eork/php-mvc-core",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/puspjoshi/pj-php-mvc-core.git",
+                "reference": "741660d10f49809efd8b5043b657ff6ffe7889bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/puspjoshi/pj-php-mvc-core/zipball/741660d10f49809efd8b5043b657ff6ffe7889bd",
+                "reference": "741660d10f49809efd8b5043b657ff6ffe7889bd",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "eork\\phpmvc\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "pusp joshi",
+                    "email": "erpushparaj23@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/puspjoshi/pj-php-mvc-core/issues",
+                "source": "https://github.com/puspjoshi/pj-php-mvc-core/tree/v1.0.3"
+            },
+            "time": "2024-10-27T06:30:41+00:00"
+        },
         {
             "name": "graham-campbell/result-type",
             "version": "v1.1.3",

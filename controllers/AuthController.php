@@ -1,13 +1,13 @@
 <?php
 namespace app\controllers;
 
-use app\core\Application;
-use app\core\Controller;
-use app\core\Request;
-use app\core\Response;
+use eork\phpmvc\Application;
+use eork\phpmvc\Controller;
+use eork\phpmvc\Request;
+use eork\phpmvc\Response;
 use app\models\LoginForm;
 use app\models\User;
-use app\core\middlewares\AuthMiddleware;
+use eork\phpmvc\middlewares\AuthMiddleware;
 
 /**
  * User: Pusp raj joshi
