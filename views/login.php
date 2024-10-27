@@ -1,7 +1,7 @@
 <?php
 /**
 * @var $model \app\models\User 
-* @var $this \app\core\View
+* @var $this \eork\phpmvc\View
 */
 
 $this->title = "Login";
@@ -10,7 +10,7 @@ $this->title = "Login";
 <h1>Login page</h1>
 <?php
 
-  use app\core\form\Form;
+  use eork\phpmvc\form\Form;
 
   $form = Form::begin('','post');
 ?>

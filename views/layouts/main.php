@@ -6,7 +6,7 @@
  * 
  */
 
-use \app\core\Application;
+use \eork\phpmvc\Application;
 
 ?>
 

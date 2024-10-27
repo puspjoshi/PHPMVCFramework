@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 
 require_once __DIR__.'/vendor/autoload.php';
 
-use app\core\Application;
+use eork\phpmvc\Application;
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();

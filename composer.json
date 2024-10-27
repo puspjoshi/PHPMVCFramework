@@ -17,6 +17,7 @@
         }
     },
     "require": {
-        "vlucas/phpdotenv": "^5.6"
+        "vlucas/phpdotenv": "^5.6",
+        "eork/php-mvc-core": "^v1.0.3"
     }
 }

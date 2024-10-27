@@ -1,12 +1,12 @@
 <?php
-/** @var $this \app\core\View */
+/** @var $this \eork\phpmvc\View */
 
 $this->title = "Register";
 ?>
 <h1>Register page</h1>
 <?php
 
-use app\core\form\Form;
+use eork\phpmvc\form\Form;
 
   $form = Form::begin('','post');
   ?>

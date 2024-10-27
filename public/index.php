@@ -13,7 +13,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 use app\controllers\SiteController;
 use app\controllers\AuthController;
-use app\core\Application;
+use eork\phpmvc\Application;
 use app\models\User;
 
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));

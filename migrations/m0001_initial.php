@@ -9,7 +9,7 @@
   {
     public function up()
     {
-        $db = \app\core\Application::$app->db;
+        $db = \eork\phpmvc\Application::$app->db;
         $sql = "
             CREATE TABLE users (
             id INT AUTO_INCREMENT PRIMARY KEY,
@@ -25,7 +25,7 @@
 
     public function down()
     {
-      $db = \app\core\Application::$app->db;
+      $db = \eork\phpmvc\Application::$app->db;
       $sql = "
           DROP TABLE users;
       ";
