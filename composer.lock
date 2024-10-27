@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e855a979162e332571cd8355372647f",
+    "content-hash": "842b49c9f848d945327a42e04a07c0a9",
     "packages": [
         {
             "name": "eork/php-mvc-core",
